@@ -44,8 +44,8 @@ class Fabrica{
     } 
 
     public function Add(Operario $op){
-
-        if (!($this->Equals($this, $op))) {
+        
+        if (!($this->Equals($this, $op) || count($this->_operarios) >= $this->_cantMaxOperarios)) {
             if (array_push($this->_operarios, $op)) {
                 return TRUE;
             }else{
@@ -64,15 +64,6 @@ class Fabrica{
             return FALSE;
         } 
     }
-
-
-
-
-
-
-
-
-
 }
 
 ?>
