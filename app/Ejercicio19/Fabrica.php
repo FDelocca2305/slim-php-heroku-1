@@ -35,6 +35,7 @@ class Fabrica{
     public function Equals(Fabrica $fb, Operario $op){
         foreach($fb->_operarios as $operario){
             if ($op->Equals($op, $operario)) {
+                
                 return TRUE;
             }else{
                 return FALSE;
